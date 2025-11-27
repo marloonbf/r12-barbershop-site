@@ -745,6 +745,42 @@
     animation: pulse-glow 2.5s ease-out infinite;
   }
   
+  /* Botão Agendar flutuante */
+  .agendar-float {
+    position: fixed;
+    right: 18px;
+    bottom: 88px; /* fica acima do WhatsApp */
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    background: #facc15; /* amarelo da marca */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.6rem;
+    box-shadow: 0 18px 40px rgba(250, 204, 21, 0.5);
+    z-index: 80;
+    animation: pulse-glow-agendar 2.5s ease-out infinite;
+  }
+
+  @keyframes pulse-glow-agendar {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 18px 40px rgba(250, 204, 21, 0.5);
+    }
+    50% {
+      transform: scale(1.06);
+      box-shadow: 0 22px 55px rgba(250, 204, 21, 0.7);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 18px 40px rgba(250, 204, 21, 0.5);
+    }
+  }
+
+  
   /* Animações scroll (AOS simples) */
   [data-animate] {
     opacity: 0;
